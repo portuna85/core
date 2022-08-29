@@ -1,10 +1,12 @@
 package hello.core.beandefinition;
 
 import hello.core.AppConfig;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+@Slf4j
 public class BeanDefinitionTest {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
@@ -20,7 +22,7 @@ public class BeanDefinitionTest {
             BeanDefinition beanDefinition = ac.getBeanDefinition(beanDefinitionName);
 
             if (beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) {
-                System.out.println("beanDefinitionName = " + beanDefinitionName + " beanDefinition = " + beanDefinition);
+                log.info("beanDefinitionName = {},beanDefinition = {}", beanDefinitionName, beanDefinition);
             }
         }
     }
