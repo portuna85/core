@@ -11,6 +11,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Map;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class ApplicationContextExtendsFIndTest {
@@ -55,6 +57,32 @@ public class ApplicationContextExtendsFIndTest {
 
         // then
 
+    }
+
+    @Test
+    void 부모타입으로_모두조회() throws Exception {
+        // given
+        Map<String, DiscountPolicy> beansOfType = ac.getBeansOfType(DiscountPolicy.class);
+        assertThat(beansOfType.size()).isEqualTo(2);
+        // when
+        for (String key : beansOfType.keySet()) {
+            System.out.println("key = " + key + " values = " + beansOfType.get(key));
+        }
+
+
+        // then
+
+    }
+
+    @Test
+    void 부모타입으로_모두_조회() throws Exception {
+        // given
+        Map<String, Object> beansOfType = ac.getBeansOfType(Object.class);
+
+        // when
+        for (String key : beansOfType.keySet()) {
+            System.out.println("key = " + key + " values = " + beansOfType.get(key));
+        }
     }
 
     @Configuration
