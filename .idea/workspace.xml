@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3aa73c51-f223-4a45-89ea-6b4e08ca156c" name="Changes" comment="xml UPDATE">
+      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/singleton/ConfigurationSingletonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hello/core/singleton/StatefulService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hello/core/singleton/StatefulService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hello/core/singleton/StatefulServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hello/core/singleton/StatefulServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/member/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/member/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/order/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/order/OrderServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,18 +91,18 @@
       <recent name="hello.core.singleton" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StatefulServiceTest.statefulServiceSinglton">
-    <configuration name="BeanDefinitionTest.빈_설정_메타정보확인" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ConfigurationSingletonTest.configurationTest">
+    <configuration name="ConfigurationSingletonTest.configurationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hello.core.beandefinition.*" />
+          <option name="PATTERN" value="hello.core.singleton.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="hello.core.beandefinition" />
-      <option name="MAIN_CLASS_NAME" value="hello.core.beandefinition.BeanDefinitionTest" />
-      <option name="METHOD_NAME" value="빈_설정_메타정보확인" />
+      <option name="PACKAGE_NAME" value="hello.core.singleton" />
+      <option name="MAIN_CLASS_NAME" value="hello.core.singleton.ConfigurationSingletonTest" />
+      <option name="METHOD_NAME" value="configurationTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConfigurationSingletonTest.configurationTest" />
         <item itemvalue="JUnit.StatefulServiceTest.statefulServiceSinglton" />
         <item itemvalue="JUnit.SingletonTest.스프링_컨테이너와_싱글톤" />
         <item itemvalue="JUnit.SingletonTest.싱글톤_패턴_적용" />
         <item itemvalue="JUnit.SingletonTest.스프링없는순수한DI컨테이너" />
-        <item itemvalue="JUnit.BeanDefinitionTest.빈_설정_메타정보확인" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +197,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661773303358</updated>
-      <workItem from="1661773305214" duration="5112000" />
+      <workItem from="1661773305214" duration="5680000" />
     </task>
     <task id="LOCAL-00001" summary="xml UPDATE">
       <created>1661773910294</created>
@@ -226,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661780339021</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="xml UPDATE">
+      <created>1661780915378</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661780915378</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
