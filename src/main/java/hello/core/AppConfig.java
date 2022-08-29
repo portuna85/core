@@ -8,24 +8,31 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+@Slf4j
 @Configuration
 public class AppConfig {
 
     @Bean
     public MemberService memberService() {
+        log.info("CALL AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
     public MemoryMemberRepository memberRepository() {
+        log.info("CALL AppConfig.memberRepository");
+
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService() {
+        log.info("CALL AppConfig.orderService");
+
         return new OrderServiceImpl(memberRepository(), new FixDiscountPolicy());
     }
 
