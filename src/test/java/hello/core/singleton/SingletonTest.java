@@ -5,6 +5,8 @@ import hello.core.member.MemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -38,5 +40,24 @@ public class SingletonTest {
 
         // then
         assertThat(service1).isSameAs(service2);
+    }
+
+    @Test
+    void 스프링_컨테이너와_싱글톤() throws Exception {
+        // given
+        // AppConfig appConfig = new AppConfig();
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+
+
+        // when
+        MemberService memberService1 = ac.getBean("memberService", MemberService.class);
+        MemberService memberService2 = ac.getBean("memberService", MemberService.class);
+
+
+        // then
+        log.info("memberService1 = {}", memberService1);
+        log.info("memberService2 = {}", memberService2);
+
+        assertThat(memberService1).isSameAs(memberService2);
     }
 }
