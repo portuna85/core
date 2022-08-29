@@ -21,14 +21,14 @@ class StatefulServiceTest {
         StatefulService statefulService2 = ac.getBean(StatefulService.class);
 
         // when
-        statefulService1.order("userA", 100000);
-        statefulService2.order("userB", 200000);
+        int userAgetPrice = statefulService1.order("userA", 100000);
+        int userBgetPrice = statefulService2.order("userB", 200000);
 
         // then
-        int price = statefulService1.getPrice();
-        log.info("price = {}", price);
+        // int price = statefulService1.getPrice();
+        log.info("price = {}", userAgetPrice);
 
-        assertThat(statefulService1.getPrice()).isEqualTo(200000);
+        // assertThat(statefulService1.userAgetPrice()).isEqualTo(200000);
     }
 
     static class TestConfig {
