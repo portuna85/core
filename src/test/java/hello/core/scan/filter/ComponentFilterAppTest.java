@@ -24,9 +24,6 @@ public class ComponentFilterAppTest {
         // when
         assertThat(beanA).isNotNull();
         assertThrows(NoSuchBeanDefinitionException.class, () -> ac.getBean("beanB", BeanB.class));
-
-        // then
-
     }
 
     @Configuration
