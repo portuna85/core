@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa73c51-f223-4a45-89ea-6b4e08ca156c" name="Changes" comment="xml UPDATE">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hello/core/AutoAppConfig.java" afterDir="false" />
+    <list default="true" id="3aa73c51-f223-4a45-89ea-6b4e08ca156c" name="Changes" comment="Spring Basic UPDATE">
+      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/AutoAppConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/filter/BeanA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/filter/BeanB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/filter/ComponentFilterAppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/filter/MyExcludeComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/filter/MyIncludeComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/discount/RateDiscountPolicy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/discount/RateDiscountPolicy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/member/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/member/MemberServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/member/MemoryMemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/member/MemoryMemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/order/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/order/OrderServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +47,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -91,12 +93,47 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="hello.core.singleton" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hello.core.scan.filter" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in core.test">
+  <component name="RunManager" selected="JUnit.ComponentFilterAppTest.filterScan">
     <configuration name="All in core.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core.test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AutoAppConfigTest.basicScan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.core.scan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hello.core.scan" />
+      <option name="MAIN_CLASS_NAME" value="hello.core.scan.AutoAppConfigTest" />
+      <option name="METHOD_NAME" value="basicScan" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComponentFilterAppTest.filterScan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.core.scan.filter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hello.core.scan.filter" />
+      <option name="MAIN_CLASS_NAME" value="hello.core.scan.filter.ComponentFilterAppTest" />
+      <option name="METHOD_NAME" value="filterScan" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,22 +170,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingletonTest.싱글톤_패턴_적용" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hello.core.singleton.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hello.core.singleton" />
-      <option name="MAIN_CLASS_NAME" value="hello.core.singleton.SingletonTest" />
-      <option name="METHOD_NAME" value="싱글톤_패턴_적용" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SingletonTest.스프링_컨테이너와_싱글톤" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core.test" />
       <extension name="coverage">
@@ -165,22 +186,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StatefulServiceTest.statefulServiceSinglton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hello.core.singleton.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hello.core.singleton" />
-      <option name="MAIN_CLASS_NAME" value="hello.core.singleton.StatefulServiceTest" />
-      <option name="METHOD_NAME" value="statefulServiceSinglton" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="core.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="hello.core.Application" />
@@ -190,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ComponentFilterAppTest.filterScan" />
+        <item itemvalue="JUnit.AutoAppConfigTest.basicScan" />
         <item itemvalue="JUnit.All in core.test" />
         <item itemvalue="JUnit.ConfigurationSingletonTest.configurationDeep" />
         <item itemvalue="JUnit.ConfigurationSingletonTest.configurationTest" />
-        <item itemvalue="JUnit.StatefulServiceTest.statefulServiceSinglton" />
-        <item itemvalue="JUnit.SingletonTest.싱글톤_패턴_적용" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +213,7 @@
       <updated>1661773303358</updated>
       <workItem from="1661773305214" duration="6503000" />
       <workItem from="1661782735025" duration="912000" />
-      <workItem from="1661795610168" duration="689000" />
+      <workItem from="1661795610168" duration="2285000" />
     </task>
     <task id="LOCAL-00001" summary="xml UPDATE">
       <created>1661773910294</created>
@@ -266,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661795745619</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Spring Basic UPDATE">
+      <created>1661796321750</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661796321750</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +297,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="xml UPDATE" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml UPDATE" />
+    <MESSAGE value="Spring Basic UPDATE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Basic UPDATE" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
