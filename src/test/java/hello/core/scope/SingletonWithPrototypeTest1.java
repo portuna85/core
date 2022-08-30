@@ -1,7 +1,5 @@
 package hello.core.scope;
 
-import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Scope;
@@ -11,37 +9,48 @@ import javax.annotation.PreDestroy;
 
 import static org.assertj.core.api.Assertions.*;
 
-@Slf4j
-public class PrototypeTest {
+public class SingletonWithPrototypeTest1 {
 
     @Test
-    void prototypeBeanFind() throws Exception {
-
+    void prototypeFind() throws Exception {
         // given
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeBean.class);
-        log.info("find prototypeBean1 = {}");
+
         PrototypeBean prototypeBean1 = ac.getBean(PrototypeBean.class);
+        prototypeBean1.addCount();
 
-        log.info("find prototypeBean1 = {}");
+        assertThat(prototypeBean1.getCount()).isEqualTo(1);
         PrototypeBean prototypeBean2 = ac.getBean(PrototypeBean.class);
+        prototypeBean2.addCount();
 
-        log.info("prototypeBean1 = {}", prototypeBean1);
-        log.info("prototypeBean2 = {}", prototypeBean2);
+        assertThat(prototypeBean2.getCount()).isEqualTo(1);
 
-        assertThat(prototypeBean1).isNotSameAs(prototypeBean2);
         ac.close();
+        // then
+
     }
 
     @Scope("prototype")
     static class PrototypeBean {
+
+        private int count = 0;
+
+        public void addCount() {
+            count++;
+        }
+
+        public int getCount() {
+            return count;
+        }
+
         @PostConstruct
         public void init() {
-            log.info("SingletonBean.init");
+            System.out.println("PrototypeBean.int " + this);
         }
 
         @PreDestroy
         public void destroy() {
-            log.info("SingletonBean.destroy");
+            System.out.println("PrototypeBean.destroy");
         }
     }
 
