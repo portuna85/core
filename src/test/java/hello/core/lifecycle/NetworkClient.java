@@ -1,8 +1,6 @@
 package hello.core.lifecycle;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
 
 @Slf4j
 public class NetworkClient{
