@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3aa73c51-f223-4a45-89ea-6b4e08ca156c" name="Changes" comment="Spring Basic UPDATE">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hello/core/annotation/MainDiscountPolicy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/discount/FixDiscountPolicy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/discount/FixDiscountPolicy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/discount/RateDiscountPolicy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/discount/RateDiscountPolicy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/order/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/order/OrderServiceImpl.java" afterDir="false" />
     </list>
@@ -94,16 +94,8 @@
       <recent name="hello.core.scan.filter" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in core.test (4)">
+  <component name="RunManager" selected="JUnit.All in core.test">
     <configuration name="All in core.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in core.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core.test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -120,6 +112,14 @@
       </method>
     </configuration>
     <configuration name="All in core.test (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in core.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core.test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -151,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in core.test" />
         <item itemvalue="JUnit.All in core.test (4)" />
         <item itemvalue="JUnit.All in core.test (3)" />
         <item itemvalue="JUnit.All in core.test (1)" />
         <item itemvalue="JUnit.AutoAppConfigTest" />
-        <item itemvalue="JUnit.All in core.test (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +170,7 @@
       <workItem from="1661773305214" duration="6503000" />
       <workItem from="1661782735025" duration="912000" />
       <workItem from="1661795610168" duration="2957000" />
-      <workItem from="1661833626395" duration="4615000" />
+      <workItem from="1661833626395" duration="5437000" />
     </task>
     <task id="LOCAL-00001" summary="xml UPDATE">
       <created>1661773910294</created>
@@ -270,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661842286569</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Spring Basic UPDATE">
+      <created>1661842894992</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1661842894992</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
