@@ -2,6 +2,9 @@ package hello.core.lifecycle;
 
 import lombok.extern.slf4j.Slf4j;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Slf4j
 public class NetworkClient{
 
@@ -30,11 +33,13 @@ public class NetworkClient{
         log.info("close = {}", url);
     }
 
+    @PostConstruct
     public void init(){
         connect();
         call("초기화 연결 메시지");
     }
 
+    @PreDestroy
     public void close() {
         log.info("NetworkClient.destory");
         disconnect();
