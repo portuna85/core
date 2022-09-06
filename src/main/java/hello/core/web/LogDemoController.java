@@ -17,10 +17,10 @@ public class LogDemoController {
 
     @RequestMapping("log-demo")
     @ResponseBody
-    public String logDemo(HttpServletRequest request) {
+    public String logDemo(HttpServletRequest request) throws InterruptedException {
         String requestURL = request.getRequestURL().toString();
-        myLogger.setRequestURL(requestURL);
 
+        myLogger.setRequestURL(requestURL);
         myLogger.log("Controller test");
         logDemoService.logic("testId");
         return "OK";
